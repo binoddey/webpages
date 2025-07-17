@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wallpaper Gallery</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to bottom right, #d3cce3, #e9e4f0);
+            color: #333;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background: linear-gradient(90deg, #6a11cb, #2575fc);
+            color: white;
+            padding: 2rem 1rem;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            background: #222;
+            color: #aaa;
+            padding: 1rem;
+            margin-top: auto;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin: 1rem auto;
+        }
+
+        hr {
+            width: 50%;
+            margin: 1rem auto;
+            border: none;
+            border-top: 2px solid #ccc;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .card {
+            background: white;
+            border-radius: 12px;
+            padding: 1rem;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .card img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .card img:hover {
+            transform: scale(1.05);
+        }
+
+        .download-btn {
+            margin-top: 1rem;
+            padding: 0.5rem 1rem;
+            background: linear-gradient(90deg, #11998e, #38ef7d);
+            border: none;
+            border-radius: 20px;
+            color: white;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .download-btn:hover {
+            background: linear-gradient(90deg, #38ef7d, #11998e);
+        }
+
+        @media (max-width: 768px) {
+            .card img {
+                height: 600px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Choose Any Wallpaper You Want</h1>
+    </header>
+    <p>Here are some wallpapers you can choose from:</p>
+    <hr>
+    <div class="gallery">
+        <div class="card">
+            <img src="https://cdn.pixabay.com/photo/2023/08/07/13/44/tree-8175062_1280.jpg" alt="Tree">
+            <button class="download-btn" onclick="downloadImage(this)">Download</button>
+        </div>
+        <div class="card">
+            <img src="https://cdn.dribbble.com/userupload/10619260/file/original-589221ed5e33f86e8ace22e9e4ed863b.jpg?resize=752x&vertical=center" alt="Abstract">
+            <button class="download-btn" onclick="downloadImage(this)">Download</button>
+        </div>
+        <div class="card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOz395NKCq0SDJJsByW6qyr0J7uSTWz-vY-w&s" alt="Mountains">
+            <button class="download-btn" onclick="downloadImage(this)">Download</button>
+        </div>
+        <div class="card">
+            <img src="https://thumbs.dreamstime.com/b/mobile-phone-wallpaper-soft-focus-delicate-flower-amidst-blurred-orange-meadow-sunset-354016436.jpg" alt="Flower Field">
+            <button class="download-btn" onclick="downloadImage(this)">Download</button>
+        </div>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1657632843433-e6a8b7451ac6?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8d2FsbHBhcGVyJTIwNGt8ZW58MHx8MHx8fDA%3D" alt="Wallpaper 4K">
+            <button class="download-btn" onclick="downloadImage(this)">Download</button>
+        </div>
+      <div class="card">
+            <img src="https://images.unsplash.com/photo-1657632843433-e6a8b7451ac6?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8d2FsbHBhcGVyJTIwNGt8ZW58MHx8MHx8fDA%3D" alt="Wallpaper 4K">
+            <button class="download-btn" onclick="downloadImage(this)">Download</button>
+        </div>
+      <div class="card">
+            <img src="https://images.unsplash.com/photo-1657632843433-e6a8b7451ac6?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8d2FsbHBhcGVyJTIwNGt8ZW58MHx8MHx8fDA%3D" alt="Wallpaper 4K">
+            <button class="download-btn" onclick="downloadImage(this)">Download</button>
+        </div>
+      <div class="card">
+            <img src="https://images.unsplash.com/photo-1657632843433-e6a8b7451ac6?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8d2FsbHBhcGVyJTIwNGt8ZW58MHx8MHx8fDA%3D" alt="Wallpaper 4K">
+            <button class="download-btn" onclick="downloadImage(this)">Download</button>
+        </div>
+    </div>
+    <footer>
+        &copy; 2025 Wallpaper Gallery. All rights reserved.
+    </footer>
+
+    <script>
+        function downloadImage(button) {
+            const img = button.previousElementSibling;
+            const link = document.createElement('a');
+            link.href = img.src;
+            link.download = img.alt.replace(/\s+/g, '_') + '.jpg';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+    </script>
+</body>
+</html>
